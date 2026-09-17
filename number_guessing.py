@@ -17,8 +17,8 @@ while ready == "Y" :
 
     guess_number += 1
 
-    if guess < 0 or guess > 100:
-        guess = input("Invalid guess! Try again. ")
+    while guess < 0 or guess > 100:
+        guess = int(input("Invalid guess! Try again. "))
 
     
 
