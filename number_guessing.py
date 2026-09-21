@@ -1,7 +1,7 @@
 # Imports random library to allow for selecting a random number
 import random
 
-# Welcome message/instructions to the game and generate the number
+# Welcome message/instructions, ask if user wants to play the computer generates the number between 1 and 100
 ready = input("Welcome to the number guessing game!" \
 "\nI am going to think of a number between 1-100 and you have to guess it!" \
 "\nReady? (Y/N) ").upper()
@@ -12,11 +12,12 @@ while ready == "Y" :
 
     random_number = random.randint(1,100)
 
-    # Ask for number, evaluate if it is the same, loops until correct
+    # Ask for a guess to what the number is
     guess = int(input("What is your first guess? "))
 
-    guess_number += 1
 
+
+    # If the guess is < 0 or > 100 print "invalid guess, please try again"
     while guess < 0 or guess > 100:
         guess = int(input("Invalid guess! Try again. "))
 
