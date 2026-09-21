@@ -29,8 +29,8 @@ while ready == "Y" :
             if guess < random_number :
                 guess = int(input("Higher! Try again! "))
             guess_number += 1
-    else :
-        guess_number += 1
+
+    guess_number += 1
 
     print(f"You got it in {guess_number} tries!")
 
