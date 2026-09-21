@@ -8,15 +8,12 @@ guess_number = 0
 while ready == "Y" :
 
     random_number = random.randint(1,100)
-    guess = int(input("What is your first guess? "))
+    guess = int(input("Welcome to the number guessing game! \n" \
+    "The computer will generate a random number and you get to guess it.\n" \
+    "What is your first guess? "))
     guess_number += 1
-    
+
     while guess != random_number :
-
-        # Ask for a guess to what the number is
-        guess = int(input("What is your next guess? "))
-
-        guess_number += 1
 
         # If the guess is < 0 or > 100 print "invalid guess, please try again"
         while guess < 0 or guess > 100:
@@ -26,6 +23,11 @@ while ready == "Y" :
                     print("Lower! Try again! ")
         if guess < random_number :
                     print("Higher! Try again! ")
+
+    
+        guess = int(input("What is your next guess? "))
+
+        guess_number += 1
 
     print(f"You got it in {guess_number} tries!")
 
